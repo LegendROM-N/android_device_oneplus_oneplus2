@@ -280,3 +280,6 @@ $(call inherit-product, device/oppo/common/common.mk)
 
 # inherit from qcom-common
 include device/qcom/common/common.mk
+
+#QUAIL STAR
+I_WANT_A_QUAIL_STAR=true
