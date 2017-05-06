@@ -288,5 +288,6 @@ include device/qcom/common/common.mk
 
 #QUAIL STAR
 I_WANT_A_QUAIL_STAR=true
-$(call inherit-product, device/oneplus/oneplus2/camera/Android.mk)
+
+$(call inherit-product, device/oneplus/oneplus2/camera/camera.mk)
 
