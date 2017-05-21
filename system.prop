@@ -23,6 +23,7 @@ bluetooth.hfp.client=1
 qcom.bluetooth.soc=rome
 ro.bluetooth.a4wp=true
 ro.bluetooth.wipower=true
+persist.bt.enableAptXHD=true
 
 # Camera
 persist.camera.HAL3.enabled=0
@@ -114,5 +115,5 @@ persist.timed.enable=true
 persist.data.iwlan.enable=true
 
 #LegendROM Version
-ro.legendrom.version=15
+ro.legendrom.version=16.0
 
