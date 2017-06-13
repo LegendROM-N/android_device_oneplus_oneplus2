@@ -60,7 +60,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 TARGET_USES_64_BIT_BINDER := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-3
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-3 androidboot.selinux=enforcing
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -107,10 +107,15 @@ QCOM_BT_USE_BTNV := true
 QCOM_BT_USE_SMD_TTY := true
 
 # Camera
-TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
-USE_DEVICE_SPECIFIC_CAMERA := true
+#TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
+#USE_DEVICE_SPECIFIC_CAMERA := true
+#TARGET_USES_MEDIA_EXTENSIONS := true
+BOARD_QTI_CAMERA_32BIT_ONLY := true
 TARGET_USES_MEDIA_EXTENSIONS := true
-TARGET_HAS_LEGACY_CAMERA_HAL1 := true
+BOARD_USE_SAMSUNG_COLORFORMAT_NV21 := true
+BOARD_BUILD_OP2_CAMERA := true
+USE_DEVICE_SPECIFIC_CAMERA := true
+DEVICE_SPECIFIC_CAMERA_PATH := hardware/qcom/camera_op2
 
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true

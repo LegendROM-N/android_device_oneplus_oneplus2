@@ -103,8 +103,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8994 \
     libshim_camera \
-    libshim_ims-camera \
+    sensors.hal.tof \
+    mm-qcamera-app \
+    libmm-qcamera \
     sensors.hal.tof
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.d/10opcamsanitize.sh:system/etc/init.d/10opcamsanitize.sh
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
@@ -283,3 +288,6 @@ include device/qcom/common/common.mk
 
 #QUAIL STAR
 I_WANT_A_QUAIL_STAR=true
+
+$(call inherit-product, device/oneplus/oneplus2/camera/camera.mk)
+

@@ -34,10 +34,28 @@ ro.bluetooth.wipower=true
 persist.bt.enableAptXHD=true
 
 # Camera
-persist.camera.HAL3.enabled=0
+camera.disable_zsl_mode=1
+persist.camera.zsl.mode=0
 persist.camera.cpp.duplication=false
 vidc.debug.perf.mode=2
 vidc.enc.dcvs.extra-buff-count=2
+
+persist.camera.hal.debug.mask=0
+media.camera.ts.monotonic=1
+camera2.portability.force_api=1
+persist.camera.HAL3.enabled=1
+persist.camera.hal3.prv.feature=1
+# Enable RAW support and camera modes
+ro.camcorder.videoModes=true
+persist.camera.raw.format=16
+persist.camera.promode=true
+ro.config.hw_camera_hdr=true
+ro.config.hw_camera_bestShot=true
+persist.camera.tintless=enable
+persist.camera.4k2k.enable=1
+vidc.dec.120fps.enabled=1
+ro.media.enc.jpeg.quality=100
+ro.media.enc.hprof.vid.fps=60
 
 # CEC
 persist.speaker.prot.enable=false
@@ -100,8 +118,6 @@ media.stagefright.enable-http=true
 media.stagefright.enable-player=true
 media.stagefright.enable-qcp=true
 media.stagefright.enable-scan=true
-media.stagefright.legacyencoder=true *get camera to work with mm blobs
-media.stagefright.less-secure=true *get camera to work with mm blobs
 media.stagefright.log-uri=1
 mmp.enable.3g2=true
 
@@ -140,6 +156,12 @@ rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 telephony.lteOnCdmaDevice=1
 telephony.lteOnGsmDevice=1
 
+ro.ril.enable.amr.wideband=1
+ro.telephony.sim_unlocked=1
+persist.radio.ignore_dom_time=5
+persist.sys.modem=yes
+ro.ril.hsxpa=3
+
 # Sensors
 ro.qc.sdk.camera.facialproc=false
 ro.qc.sdk.gestures.camera=false
@@ -162,7 +184,7 @@ persist.dbg.vt_avail_ovr=0
 persist.dbg.wfc_avail_ovr=0
 
 #LegendROM Version
-ro.legendrom.version=16.0
+ro.legendrom.version=16.1
 
 # Zram disk
 ro.config.zram=true
