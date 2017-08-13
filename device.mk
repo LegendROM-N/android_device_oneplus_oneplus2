@@ -284,5 +284,10 @@ include device/qcom/common/common.mk
 #QUAIL STAR
 I_WANT_A_QUAIL_STAR=true
 
+#OTA
+PRODUCT_PROPERTY_OVERRIDES += \
+      persist.ota.romname=LegendROM \
+      persist.ota.version=20170813 \
+      persist.ota.manifest=https://raw.githubusercontent.com/LegendROM-N/android_extras_ota/cm-14.1/oneplus2.xml
+      
 $(call inherit-product, device/oneplus/oneplus2/camera/camera.mk)
-
