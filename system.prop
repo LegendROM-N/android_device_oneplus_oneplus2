@@ -217,7 +217,7 @@ persist.dbg.vt_avail_ovr=0
 persist.dbg.wfc_avail_ovr=0
 
 #LegendROM Version
-ro.legendrom.version=18.0
+ro.legendrom.version=19.0
 
 # Zram disk
 ro.config.zram=true
